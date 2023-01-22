@@ -20,7 +20,7 @@ library(shinysurveys)
 library(readr)
 
 setwd("F:/social survey website project/data")
-religion2018 <- read_rds("religion2018.rds")
+religion2018 <- read_rds("religion2018.rda")
 
 choicecountry <- religion2018 %>% count(c_alphan)
 
@@ -35,7 +35,7 @@ ui <- fluidPage(
         sidebarPanel(
             varSelectInput("religionquestion",
                         label = p("Question"),
-                        data = religion2018[, c(3:372)],
+                        data = religion2018[, c(2:372)],
                         multiple = FALSE),
             selectInput("countryreligion",
                         label = p("Country"),
