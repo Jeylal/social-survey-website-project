@@ -1,0 +1,14 @@
+name: social_survey_website_project
+title: social_survey_website_project
+username:
+account: celalguney
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8095149
+bundleId: 6760875
+url: https://celalguney.shinyapps.io/social_survey_website_project/
+when: 1674400145.91433
+lastSyncTime: 1674400145.91434
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data/religion2018.pdf|data/religion2018.rda|data/religion2018.Rdata|data/religion2018.sav
