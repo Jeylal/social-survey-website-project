@@ -18,9 +18,8 @@ library(haven)
 library(shinyWidgets)
 library(shinysurveys)
 library(readr)
-
 setwd("F:/social survey website project/data")
-religion2018 <- read_rds("religion2018.rda")
+religion2018 <- readRDS("religion2018.rda")
 
 choicecountry <- religion2018 %>% count(c_alphan)
 
@@ -57,7 +56,7 @@ server <- function(input, output) {
     religion2018 %>% 
       filter(c_alphan %in% input$countryreligion) %>% 
       ggplot()+
-      aes(y = !!input$religionquestion, x = after_stat(count/sum(count)), fill = c_alphan)+
+      aes(y = as_label(!!input$religionquestion), x = after_stat(count/sum(count)), fill = c_alphan)+
       geom_bar(col="black", alpha=0.8, width = 0.8, na.rm = TRUE, position = "dodge")+
       scale_x_continuous(position = "top",
                          expand = c(0.001,0))+
